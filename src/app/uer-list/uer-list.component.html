@@ -1,0 +1,24 @@
+<h1 class="text-center">Users</h1>
+<div class="container">
+    <table class="table table-bordered" >
+      <thead class="bg-primary">
+        <tr>
+          <td scope="col">No</td>
+          <td scope="col">FirstName</td>
+          <td scope="col">LastName</td>
+          <td scope="col"> Email</td>
+          <td scope="col" >Phone</td>
+        </tr>
+      </thead>
+      <tbody *ngFor="let data of apiData[0]; let i = index; ">
+          <tr >
+            <td scope="row"> {{i}}</td>
+            <td >{{data.first_name}}</td>
+            <td>{{data.last_name}}</td>
+            <td>{{data.email}}</td>
+            <td><img src="{{data.avatar}}" alt="" class="avatar"></td>
+           
+          </tr>
+      </tbody>
+    </table>
+  </div>
